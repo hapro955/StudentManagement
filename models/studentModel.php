@@ -8,6 +8,11 @@
  			$sqlEdit= "UPDATE student SET studentName='$name',studentStatus='$status' WHERE studentId='$id'";
  			mysqli_query($this->$conn,$sqlEdit);
  		}
+ 	function listStudent(){
+ 		$sql="SELECT * FROM student ";
+ 		$resurt=mysqli_query($this->$conn,$sql);
+ 		return $resurt;
+ 	}
  	}
 
  }
